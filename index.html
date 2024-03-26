@@ -31,23 +31,23 @@
           <fieldset class="form-group">
             <legend></legend>
             <div class="input-group">
-              <label for="first_name">First Name</label>
+              <label for="first-name">First Name</label>
               <input
                 type="text"
-                name="first_name"
-                id="first_name"
+                name="first-name"
+                id="first-name"
+                placeholder="John"
                 required
-                autofocus
               />
             </div>
             <div class="input-group">
-              <label for="last_name">Last Name</label>
+              <label for="last-name">Last Name</label>
               <input
                 type="text"
-                name="last_name"
-                id="last_name"
+                name="last-name"
+                id="last-name"
+                placeholder="Doe"
                 required
-                pattern=""
               />
             </div>
             <div class="input-group">
@@ -56,18 +56,19 @@
                 type="email"
                 name="email"
                 id="email"
+                placeholder="example@domain.com"
                 required
-                pattern=""
-                disabled
               />
             </div>
             <div class="input-group">
-              <label for="phone_number">Phone Number</label>
+              <label for="phone-number">Phone Number</label>
               <input
                 type="tel"
-                name="phone_number"
-                id="phone_number"
+                name="phone-number"
+                id="phone-number"
+                placeholder="+48576345019"
                 required
+                pattern="+48[0-9]{9}"
               />
             </div>
             <div class="input-group">
@@ -76,17 +77,18 @@
                 type="password"
                 name="password"
                 id="password"
+                placeholder="*********"
+                minlength="8"
                 required
-                min="8"
-                pattern=""
               />
             </div>
             <div class="input-group">
-              <label for="password_confirmation">Confirm Password</label>
+              <label for="password-confirmation">Confirm Password</label>
               <input
                 type="password"
-                name="password_confirmation"
-                id="password_confirmation"
+                name="password-confirmation"
+                id="password-confirmation"
+                placeholder="*********"
                 required
               />
             </div>

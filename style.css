@@ -47,9 +47,14 @@ body {
   border: none;
   border-radius: 10px;
   font-weight: 700;
+  cursor: pointer;
+
+  transition: transform 0.3s ease-in-out;
 }
 
-/*  */
+.btn:hover {
+  transform: scale(1.05);
+}
 
 .container {
   margin: 0 auto;
@@ -112,7 +117,7 @@ body {
 
 .content > :not(form) {
   max-width: 52ch;
-  font-size: 24px;
+  font-size: clamp(20px, 2vw, 24px);
   margin-inline: clamp(25px, 3vw, 50px);
   margin-block: 20px;
 }
@@ -123,7 +128,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin-top: clamp(30px, 3vw, 60px);
+  margin-block: clamp(30px, 3vw, 60px);
 }
 
 .signup-form > *:not(.form-group) {
@@ -161,16 +166,32 @@ body {
   letter-spacing: 1.2px;
 }
 
-.input-group input[type="text"],
-.input-group input[type="email"],
-.input-group input[type="tel"],
-.input-group input[type="password"] {
+/*  */
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="tel"],
+.signup-form input[type="password"] {
   padding: 8px 10px;
   border-radius: 5px;
-  border: 2px solid var(--color2);
   font-size: 16px;
-
   width: 100%;
+
+  border: 2px solid var(--color2);
+}
+
+.signup-form input:not(:placeholder-shown):invalid {
+  border: 2px solid red;
+}
+
+.signup-form input[type="password"]:invalid {
+  border: 2px solid red;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border: 2px solid dodgerblue;
+  transform: scale(1.01);
 }
 
 /*  */

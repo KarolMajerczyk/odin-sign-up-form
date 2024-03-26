@@ -28,9 +28,9 @@
 
         <form action="#" method="post" class="signup-form">
           <h2>Let's do this!</h2>
-          <fieldset>
-            <legend>Basic Informations</legend>
-            <div>
+          <fieldset class="form-group">
+            <legend></legend>
+            <div class="input-group">
               <label for="first_name">First Name</label>
               <input
                 type="text"
@@ -40,15 +40,28 @@
                 autofocus
               />
             </div>
-            <div>
+            <div class="input-group">
               <label for="last_name">Last Name</label>
-              <input type="text" name="last_name" id="last_name" required />
+              <input
+                type="text"
+                name="last_name"
+                id="last_name"
+                required
+                pattern=""
+              />
             </div>
-            <div>
+            <div class="input-group">
               <label for="email">Email</label>
-              <input type="email" name="email" id="email" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                pattern=""
+                disabled
+              />
             </div>
-            <div>
+            <div class="input-group">
               <label for="phone_number">Phone Number</label>
               <input
                 type="tel"
@@ -57,7 +70,7 @@
                 required
               />
             </div>
-            <div>
+            <div class="input-group">
               <label for="password">Password</label>
               <input
                 type="password"
@@ -68,7 +81,7 @@
                 pattern=""
               />
             </div>
-            <div>
+            <div class="input-group">
               <label for="password_confirmation">Confirm Password</label>
               <input
                 type="password"
@@ -78,10 +91,9 @@
               />
             </div>
           </fieldset>
-          <button type="submit">Create Account</button>
+          <button class="btn" type="submit">Create Account</button>
+          <p>Already have an account? <a href="#">Log in</a></p>
         </form>
-
-        <p>Already have an account? <a href="#">Log in</a></p>
       </div>
     </div>
     <script src="script.js"></script>
